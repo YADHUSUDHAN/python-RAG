@@ -107,14 +107,23 @@ A production-ready **Retrieval-Augmented Generation (RAG)** system built with th
 
 ## 🔄 Changing Models
 
-**Quick switch** (same provider): Edit `.env` line 21
+**Quick switch**: Edit `.env` file
 ```bash
-LLM_MODEL=gpt-4  # or gpt-3.5-turbo, google/flan-t5-base, etc.
+# For OpenAI
+LLM_PROVIDER=openai
+OPENAI_API_KEY=your-key
+LLM_MODEL=gpt-4  # or gpt-3.5-turbo
+
+# For HuggingFace (Free)
+LLM_PROVIDER=huggingface
+HUGGINGFACE_API_KEY=your-key
+LLM_MODEL=google/flan-t5-base  # or mistralai/Mistral-7B-Instruct-v0.2
 ```
 
-**Full switch** (OpenAI ↔️ HuggingFace): See [MODEL_SWITCHING_GUIDE.md](MODEL_SWITCHING_GUIDE.md)
-
-**Free alternatives**: See [FREE_MODELS_GUIDE.md](FREE_MODELS_GUIDE.md)
+### Step 2: Ask Questions
+1. Once the knowledge base is ready, enter your question
+2. Click "Get Answer"
+3. View the AI-generated answer with source documents
 4. Expand "View Source Documents" to see which parts of your documents were used
 
 ### Tips for Best Results
@@ -204,7 +213,7 @@ LOG_LEVEL=INFO             # DEBUG, INFO, WARNING, ERROR
 - `mistralai/Mistral-7B-Instruct-v0.2` (best free quality)
 - `meta-llama/Llama-2-7b-chat-hf` (good alternative)
 
-See [MODEL_SWITCHING_GUIDE.md](MODEL_SWITCHING_GUIDE.md) for switching instructions.
+Just change `LLM_PROVIDER` and corresponding API key in `.env` file - no code changes needed!
 
 #### Embedding Models (for semantic search)
 - `sentence-transformers/all-mpnet-base-v2` (default, best quality)
@@ -262,9 +271,9 @@ See [MODEL_SWITCHING_GUIDE.md](MODEL_SWITCHING_GUIDE.md) for switching instructi
 
 ### Getting Help
 1. Check [SETUP.md](SETUP.md) for detailed setup instructions
-2. Review [MIGRATION.md](MIGRATION.md) if upgrading from old version
-3. Check logs in `rag_system.log` for detailed error messages
-4. Ensure all dependencies are installed correctly
+2. Check logs in `rag_system.log` for detailed error messages
+3. Ensure all dependencies are installed correctly
+4. Review the configuration in `.env` file
 
 ## 🧪 Testing
 
@@ -294,11 +303,7 @@ modern-rag-system/
 ├── .env                          # Your config (not in git)
 ├── README.md                     # This file
 ├── SETUP.md                      # Detailed setup guide
-├── MIGRATION.md                  # Migration from old version
-├── MODEL_SWITCHING_GUIDE.md      # How to change models
-├── FREE_MODELS_GUIDE.md          # Free alternatives & HuggingFace info
-├── PROJECT_SUMMARY.md            # Technical overview
-├── QUICK_REFERENCE.md            # Quick reference
+├── DOCKER_GUIDE.md               # Docker deployment options
 └── tests/
     └── test_basic.py             # Basic tests
 ```
@@ -338,12 +343,12 @@ Built with:
 
 ## 📚 Additional Resources
 
-- [Model Switching Guide](MODEL_SWITCHING_GUIDE.md) - Change LLM models
-- [Free Models Guide](FREE_MODELS_GUIDE.md) - Free alternatives to OpenAI
 - [LangChain Documentation](https://python.langchain.com/docs/get_started/introduction)
 - [OpenAI API Documentation](https://platform.openai.com/docs)
 - [Hugging Face Documentation](https://huggingface.co/docs)
 - [Streamlit Documentation](https://docs.streamlit.io/)
+- [SETUP.md](SETUP.md) - Detailed setup instructions
+- [DOCKER_GUIDE.md](DOCKER_GUIDE.md) - Docker deployment options
 
 ## 🔄 Version History
 
