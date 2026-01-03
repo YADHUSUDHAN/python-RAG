@@ -1,0 +1,88 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+
+# Environment Variables
+.env
+.env.local
+.env.*.local
+secret_api_keys.py
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Logs
+*.log
+logs/
+rag_system.log
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Model Cache (optional - uncomment if you want to cache models in git)
+# .cache/
+# models/
+
+# Streamlit
+.streamlit/secrets.toml
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# FAISS index files (optional - uncomment to exclude saved indexes)
+# *.faiss
+# *.pkl
+
+# Temporary files
+*.tmp
+temp/
+tmp/
+
+# Internal/Personal Documentation (keep only README.md, SETUP.md, DOCKER_GUIDE.md)
+DEPLOYMENT_CHECKLIST.md
+DEPLOYMENT_GUIDE.md
+FREE_MODELS_GUIDE.md
+INTERVIEW_PREP.md
+MIGRATION.md
+MODEL_SWITCHING_GUIDE.md
+PROJECT_SUMMARY.md
+QUICK_REFERENCE.md
+RESUME_GUIDE.md
+SIMPLE_PROVIDER_SWITCH.md
+VERIFICATION_REPORT.md

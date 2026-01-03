@@ -1,0 +1,48 @@
+# Modern RAG System - Requirements
+# Python 3.10+ required
+# Tested on Python 3.10, 3.11, 3.12
+# Last updated: January 2026
+
+# Core Dependencies
+streamlit==1.39.0
+python-dotenv==1.0.1
+
+# LangChain ecosystem (stable versions)
+langchain==0.3.13
+langchain-community==0.3.13
+langchain-core==0.3.63
+langchain-huggingface==0.1.2
+langchain-text-splitters==0.3.8
+
+# Hugging Face integrations
+huggingface-hub==0.26.5
+sentence-transformers==3.3.1
+transformers==4.47.1
+tokenizers==0.21.0
+
+# Vector store
+faiss-cpu==1.9.0.post1
+# For GPU support, use instead:
+# faiss-gpu==1.9.0.post1
+
+# Document processing
+pypdf==5.1.0
+python-docx==1.1.2
+
+# Web scraping for URLs
+beautifulsoup4==4.12.3
+requests==2.32.3
+
+# Core ML dependencies
+numpy==1.26.4
+torch==2.5.1
+# For CPU only, the above is fine
+# For GPU support, install torch with CUDA from pytorch.org
+
+# Additional utilities
+typing-extensions==4.12.2
+pydantic==2.10.3
+pydantic-core==2.27.1
+
+# Optional: Performance improvements
+# accelerate==1.2.1  # For faster model loading on GPU
